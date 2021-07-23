@@ -1,0 +1,40 @@
+{% url 'public:index' as index_url %}
+{% url 'public:about' as about_url %}
+{% url 'contact:contact' as contact_url %}
+
+<!-- Footer -->
+<footer class="footer text-center">
+    <div class="container">
+        <div class="row">
+            <!-- Footer Location -->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <p class="lead mb-0">
+                    Reach Us @
+                    <br/>
+                    <a href="mailto:me@mymail.com">Alpha Website Email</a>
+                </p>
+            </div>
+            <!-- Footer Social Icons -->
+            <div class="col-lg-4 mb-5 mg-lg-0">
+                <a class="btn btn-outline-light btn-social mx-1" title="Youtube" href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" title="Instagram" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" title="Twitter" href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" title="Patreon" href="https://www.patreon.com"><i class="fab fa-patreon"></i></a>
+            </div>
+            <!-- Footer About Text -->
+            <div class="col-lg-4">
+                <p class="lead mb-0 w-100">
+                    Quick Links
+                    <br/>
+                    <a class="px-2 {% if request.path == index_url %}active{% endif %}" href="{{ index_url }}">Home</a></li>
+                    <a class="px-2 {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}">About</a></li>
+                    <a class="px-2 {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Contact</a></li>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Copyright Section -->
+<div class="copyright py-4 text-center text-white">
+    <div class="container"><small>Last Update - July 2021 - Special Thanks to <a href="https://www.youtube.com/playlist?list=PL39pssg07dpDJas1vxb7Dyw5f8SkAw6c-">Hacker Shack</a> for the Tutorial</small></div>
+</div>

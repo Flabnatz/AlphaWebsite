@@ -1,0 +1,13 @@
+manage.py runserver                                 // start up the server
+manage.py migrate                                   // initialize website database
+manage.py makemigrations                            // update new apps into database
+manage.py createsuperuser                           // new admin account
+manage.py startapp [app name] [route to app]        // initialize app
+
+// Docker Image via Makefile Aliases
+make [Makefile defined commands]                    // requires a Makefile in dir
+//   build                                          // runs full Dockerfile
+//   build-prod                                     // production run (no dev installs)
+//   compose-start                                  // brings server up
+//   compose-stop                                   // brings server down
+//   compose-manage-py cmd="[commands above]"       // run manage.py within Docker Image
